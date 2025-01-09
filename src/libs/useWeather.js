@@ -14,7 +14,7 @@ export function useWeather(query) {
             try {
                 setIsLoading(true)
                 setError("")
-                const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=bf5aac2680bd489a8be195432250901&q=${query}&days=5&aqi=no&alerts=no`)
+                const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=bf5aac2680bd489a8be195432250901&q=${query}&days=5&aqi=no&alerts=no`)
                 if (!res.ok) throw new Error("Please enter a valid city name");
                 const data = await res.json();
                 setWeather(data)
